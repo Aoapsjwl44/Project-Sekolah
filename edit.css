@@ -1,0 +1,193 @@
+
+/* ==============================
+   RESET DAN BODY
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e8f0ff, #f4f7fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    color: #263445;
+}
+
+/* ==============================
+   CONTAINER
+============================== */
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+.card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.09);
+    border: 1px solid #e8edf5;
+}
+
+/* ==============================
+   FORM
+============================== */
+.form-pengaduan {
+    width: 100%;
+}
+
+.form-pengaduan h1 {
+    font-size: 27px;
+    font-weight: 700;
+    color: #1e3a5f;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.form-pengaduan label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #34445a;
+    margin-bottom: 8px;
+    margin-top: 18px;
+}
+
+.form-pengaduan input,
+.form-pengaduan textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d5deea;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #263445;
+    background: #f9fbfe;
+    transition: 0.3s ease;
+}
+
+.form-pengaduan input {
+    height: 46px;
+}
+
+.form-pengaduan textarea {
+    min-height: 130px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* ==============================
+   FOCUS INPUT
+============================== */
+.form-pengaduan input:focus,
+.form-pengaduan textarea:focus {
+    border-color: #3478db;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(52, 120, 219, 0.12);
+}
+
+/* ==============================
+   PESAN ERROR
+============================== */
+.pesan-gagal {
+    background: #fff0f0;
+    color: #d62828;
+    border-left: 4px solid #e63946;
+    padding: 12px 15px;
+    border-radius: 7px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+/* ==============================
+   TOMBOL ACTION
+============================== */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.form-actions .btn {
+    flex: 1;
+    min-height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    border: none;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Tombol Cancel */
+.btn-kembali {
+    background: #edf1f6;
+    color: #526174;
+}
+
+.btn-kembali:hover {
+    background: #dce3ec;
+    color: #263445;
+    transform: translateY(-2px);
+}
+
+/* Tombol Save */
+.btn-edit-menu-p {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-edit-menu-p:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1742a5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+.form-actions .btn:active {
+    transform: scale(0.97);
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .card {
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .form-pengaduan h1 {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+        min-height: 45px;
+    }
+}

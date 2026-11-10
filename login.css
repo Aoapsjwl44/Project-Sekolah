@@ -1,0 +1,445 @@
+
+/* ===================================
+   LOGIN - SISTEM PENGADUAN SEKOLAH
+=================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body.halaman-login {
+    min-height: 100vh;
+    margin: 0;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at top left, #e7e9ff 0, transparent 38%),
+        radial-gradient(circle at bottom right, #dce8ff 0, transparent 35%),
+        #f5f6fc;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #252943;
+}
+
+/* Pembungkus login */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 50px);
+}
+
+/* Kartu login */
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 38px 36px;
+    background: #fff;
+    border: 1px solid #e9eaf4;
+    border-radius: 20px;
+    box-shadow: 0 18px 55px rgba(39, 45, 90, 0.10);
+}
+
+/* Logo sekolah */
+
+.login-card .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login-card .logo img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* Judul */
+
+.login-card h1 {
+    margin: 0 0 10px;
+    color: #282b49;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 750;
+}
+
+.login-deskripsi {
+    margin: 0 0 28px;
+    color: #858aa0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Pesan error */
+
+.login-card .pesan {
+    margin: 0 0 22px;
+    padding: 12px 15px;
+    color: #b42335;
+    background: #fff0f1;
+    border: 1px solid #ffd8dd;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Form */
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+/* Label */
+
+.login-card form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 9px;
+    color: #41455f;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-card form label svg {
+    flex-shrink: 0;
+    color: #6558df;
+}
+
+/* Input username dan password */
+
+.login-card form input[type="text"],
+.login-card form input[type="password"] {
+    display: block;
+    width: 100%;
+    height: 49px;
+    margin: 0 0 22px;
+    padding: 0 15px;
+    color: #30344e;
+    background: #fafaff;
+    border: 1px solid #dfe2ef;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+.login-card form input:focus {
+    background: #fff;
+    border-color: #695be6;
+    box-shadow: 0 0 0 4px rgba(105, 91, 230, .11);
+}
+
+.login-card form input::placeholder {
+    color: #a3a7b8;
+}
+
+/* Tombol login */
+
+.login-card .login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 49px;
+    margin-top: 5px;
+    padding: 12px 18px;
+    color: #fff;
+    background: linear-gradient(110deg, #5b50d9, #7869ee);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 7px 16px rgba(91, 80, 217, .20);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background .2s;
+}
+
+.login-card .login-button:hover {
+    background: linear-gradient(110deg, #493ec4, #6555dd);
+    box-shadow: 0 10px 20px rgba(91, 80, 217, .26);
+    transform: translateY(-2px);
+}
+
+.login-card .login-button:active {
+    transform: translateY(0);
+}
+
+/* Link daftar */
+
+.login-register {
+    margin: 24px 0 0;
+    color: #858aa0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.login-register a {
+    color: #5b50d9;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-register a:hover {
+    color: #4034b8;
+    text-decoration: underline;
+}
+
+/* Link kembali */
+
+.login-kembali {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #eff0f6;
+    text-align: center;
+}
+
+.login-kembali a {
+    color: #737991;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.login-kembali a:hover {
+    color: #5b50d9;
+}
+
+/* Tampilan HP */
+
+@media (max-width: 480px) {
+    body.halaman-login {
+        padding: 16px;
+    }
+
+    .login-container {
+        min-height: calc(100vh - 32px);
+    }
+
+    .login-card {
+        max-width: 100%;
+        padding: 30px 22px;
+        border-radius: 16px;
+    }
+
+    .login-card .logo img {
+        width: 76px;
+        height: 76px;
+    }
+
+    .login-card h1 {
+        font-size: 26px;
+    }
+}
+
+/* ===================================
+   REGISTER - DAFTAR ANGGOTA
+=================================== */
+
+body.halaman-register {
+    min-height: 100vh;
+    margin: 0;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at top left, #e7e9ff 0, transparent 38%),
+        radial-gradient(circle at bottom right, #dce8ff 0, transparent 35%),
+        #f5f6fc;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #252943;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 50px);
+}
+
+.register-card {
+    width: 100%;
+    max-width: 460px;
+    margin: auto;
+    padding: 35px;
+    background: #fff;
+    border: 1px solid #e9eaf4;
+    border-radius: 20px;
+    box-shadow: 0 18px 55px rgba(39, 45, 90, 0.10);
+}
+
+.register-card h1 {
+    margin: 0 0 10px;
+    color: #282b49;
+    text-align: center;
+    font-size: 29px;
+    font-weight: 750;
+}
+
+.register-deskripsi {
+    margin: 0 0 25px;
+    color: #858aa0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.register-card form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.register-card form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 9px;
+    color: #41455f;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.register-card form label svg {
+    flex-shrink: 0;
+    color: #6558df;
+}
+
+.register-card form input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin: 0 0 20px;
+    padding: 0 14px;
+    color: #30344e;
+    background: #fafaff;
+    border: 1px solid #dfe2ef;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.register-card form input:focus {
+    background: #fff;
+    border-color: #695be6;
+    box-shadow: 0 0 0 4px rgba(105, 91, 230, .11);
+}
+
+.register-card form input:focus-visible {
+    outline: none;
+}
+
+.register-card .register-button {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    margin: 4px 0 10px;
+    padding: 12px 18px;
+    color: #fff;
+    background: linear-gradient(110deg, #5b50d9, #7869ee);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 7px 16px rgba(91, 80, 217, .20);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.register-card .register-button:hover {
+    background: linear-gradient(110deg, #493ec4, #6555dd);
+    box-shadow: 0 10px 20px rgba(91, 80, 217, .26);
+    transform: translateY(-2px);
+}
+
+.register-card .register-button:active {
+    transform: translateY(0);
+}
+
+.register-card .pesan {
+    margin: 0 0 20px;
+    padding: 12px 15px;
+    color: #b42335;
+    background: #fff0f1;
+    border: 1px solid #ffd8dd;
+    border-radius: 9px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.register-card .register-login {
+    margin: 20px 0 0;
+    color: #858aa0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.register-card a {
+    color: #5b50d9;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.register-card a:hover {
+    color: #4034b8;
+    text-decoration: underline;
+}
+
+/* Responsif untuk HP */
+
+@media (max-width: 480px) {
+    body.halaman-register {
+        padding: 16px;
+    }
+
+    .register-container {
+        min-height: calc(100vh - 32px);
+    }
+
+    .register-card {
+        max-width: 100%;
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .register-card h1 {
+        font-size: 25px;
+    }
+}
+/* Logo agar berada di tengah */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.logo img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+}

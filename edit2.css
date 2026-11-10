@@ -1,0 +1,256 @@
+
+/* =========================================
+   EDIT.CSS — DAFTAR PENGADUAN
+   Maksimal konten 680px
+   Sidebar tetap di kanan layar
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #f5f6fc;
+    color: #252942;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* SIDEBAR KANAN */
+
+.sidebar.sidebar-kanan {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+
+    width: 255px !important;
+    min-width: 255px !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    background: #fff;
+    border-left: 1px solid #eceef5;
+    border-right: 0;
+    border-radius: 0;
+    z-index: 9999;
+}
+
+/* AREA UTAMA DI SEBELAH KIRI SIDEBAR */
+
+body > .container {
+
+    max-width: none !important;
+    min-height: 100vh;
+    margin: 20px !important;
+    padding: 24px !important;
+}
+
+/* PEMBUNGKUS KONTEN */
+
+.layout-utama {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.layout-konten {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+}
+
+/* KARTU DAFTAR PENGADUAN */
+
+.layout-konten .card.tengah {
+    display: block !important;
+    width: 100% !important;
+    max-width: 80% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 24px !important;
+
+    background: #fff;
+    border: 1px solid #eceef5;
+    border-radius: 15px;
+    box-shadow: 0 6px 22px rgba(37, 41, 66, .05);
+    text-align: left;
+}
+
+/* JUDUL */
+
+.layout-konten .card.tengah h1 {
+    margin: 0 0 14px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eceef5;
+
+    color: #252942;
+    font-size: 22px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* DESKRIPSI */
+
+.container .card.tengah > p {
+    margin: 0 0 20px;
+    color: #858ba3;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* PEMBUNGKUS TABEL */
+
+.layout-konten .table-wrap {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto;
+    border: 1px solid #eceef5;
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* TABEL */
+
+.layout-konten .table-wrap table {
+    width: 100%;
+    min-width: 620px;
+    margin: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+
+/* HEADER TABEL */
+
+.layout-konten .table-wrap thead th {
+    padding: 12px 10px;
+    background: #f3f2ff;
+    color: #5145bd;
+    border-bottom: 1px solid #e5e2ff;
+    font-size: 10px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+/* ISI TABEL */
+
+.layout-konten .table-wrap tbody td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #f0f1f6;
+    color: #454b61;
+    font-size: 11px;
+    line-height: 1.7;
+    vertical-align: middle;
+}
+
+.layout-konten .table-wrap tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.layout-konten .table-wrap tbody tr:hover {
+    background: #fafaff;
+}
+
+.layout-konten .table-wrap tbody td:first-child {
+    color: #858ba3;
+    font-weight: 600;
+}
+
+/* KOLOM KETERANGAN */
+
+.layout-konten .table-wrap tbody td:nth-child(5) {
+    min-width: 130px;
+    max-width: 200px;
+    overflow-wrap: anywhere;
+}
+
+/* IKON PENSIL */
+
+.btn-edit-menu-i {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+    padding: 0;
+
+    border: 1px solid #dce8ff;
+    border-radius: 9px;
+    background: #eaf3ff;
+    color: #2777d4;
+
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s, color .2s, transform .2s;
+}
+
+.btn-edit-menu-i:hover {
+    background: #2777d4;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* BARIS KOSONG */
+
+.layout-konten .table-wrap tbody td[colspan] {
+    padding: 28px 14px;
+    color: #858ba3;
+    text-align: center;
+}
+
+/* RESPONSIF HP */
+
+@media (max-width: 700px) {
+    .sidebar.sidebar-kanan {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    body > .container {
+        width: 100% !important;
+        min-height: auto;
+        padding: 12px !important;
+    }
+
+    .layout-utama,
+    .layout-konten {
+        width: 100% !important;
+        max-width: 680px !important;
+    }
+
+    .layout-konten .card.tengah {
+        width: 100% !important;
+        max-width: 680px !important;
+        padding: 16px !important;
+    }
+
+    .layout-konten .card.tengah h1 {
+        font-size: 19px;
+    }
+}

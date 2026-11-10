@@ -1,0 +1,43 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: #172554;
+  padding: 20px;
+  color: white;
+  overflow-y: auto;
+}
+
+.main-content {
+  margin-right: 250px;
+  padding: 30px;
+}.menu-tambah {
+    background: var(--hijau)
+}
+.menu-tambah:hover {
+    background: var(--hijau-hover);
+}
+
+.menu-edit {
+    background:var(--kuning)
+}
+.menu-edit:hover {
+    background: var(--kuning-hover);
+}
+
+.menu-hapus
+{
+    background:var(--merah)
+}
+.menu-hapus:hover
+{
+    background: var(--merah-hover);
+}
+.sidebar-logout{
+    background: rgba(255, 0, 0, 0.815);
+}
+.sidebar-logout:hover {
+    background: red;
+}

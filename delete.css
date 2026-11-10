@@ -1,0 +1,521 @@
+
+/* ==========================================
+   DELETE.CSS - HALAMAN HAPUS PENGADUAN
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ===== LAYOUT UTAMA ===== */
+
+.layout-utama {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    padding: 24px 290px 24px 24px;
+}
+
+/* ===== KONTEN UTAMA ===== */
+
+.layout-konten {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+}
+
+.layout-konten .card.tengah {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 30px;
+
+    text-align: left;
+    background: #fff;
+    border: 1px solid #eceef5;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(37, 41, 66, .05);
+}
+
+/* ===== JUDUL DAN DESKRIPSI ===== */
+
+.layout-konten .card.tengah > h1 {
+    margin: 0 0 12px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #eceef5;
+    color: #252942;
+    font-size: 24px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.layout-konten .card.tengah > p {
+    margin: 0 0 22px;
+    color: #858ba3;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* ===== KARTU PENGADUAN ===== */
+
+.konfirmasi-hapus {
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 18px;
+    padding: 22px;
+
+    overflow-wrap: anywhere;
+    background: #fff;
+    border: 1px solid #eceef5;
+    border-left: 4px solid #e34c61;
+    border-radius: 12px;
+
+    transition: box-shadow .2s ease;
+}
+
+.konfirmasi-hapus:hover {
+    box-shadow: 0 6px 20px rgba(37, 41, 66, .07);
+}
+
+/* Informasi pengaduan */
+
+.konfirmasi-hapus p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin: 0 0 13px;
+    color: #626980;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.konfirmasi-hapus p strong {
+    flex: 0 0 115px;
+    color: #343950;
+    font-weight: 700;
+}
+
+/* ===== FORM DAN TOMBOL HAPUS ===== */
+
+.konfirmasi-hapus form {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid #f0f1f6;
+}
+
+.konfirmasi-hapus .btn-hapus-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 42px;
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 9px;
+    background: #e34c61;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 750;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(227, 76, 97, .15);
+    transition: background .2s, transform .2s, box-shadow .2s;
+}
+
+.konfirmasi-hapus .btn-hapus-menu i {
+    font-size: 15px;
+}
+
+.konfirmasi-hapus .btn-hapus-menu:hover {
+    background: #c92f46;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(227, 76, 97, .23);
+}
+
+.konfirmasi-hapus .btn-hapus-menu:focus-visible {
+    outline: 3px solid #ffb4bf;
+    outline-offset: 3px;
+}
+
+/* ===== NOTIFIKASI ===== */
+
+.layout-konten .card.tengah > .pesan {
+    margin: 0 0 20px;
+    padding: 13px 16px;
+
+    border: 1px solid #bdebd0;
+    border-radius: 10px;
+    background: #eaf9f0;
+    color: #168653;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.layout-konten .card.tengah > .pesan-gagal {
+    margin: 0 0 20px;
+    padding: 13px 16px;
+
+    border: 1px solid #ffd7dc;
+    border-radius: 10px;
+    background: #fff0f1;
+    color: #c12f45;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* ===== SIDEBAR MENEMPEL DI KANAN ===== */
+
+.sidebar-kanan {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 250px;
+    height: calc(100vh - 40px);
+    max-height: calc(100vh - 40px);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 1000px) {
+    .layout-utama {
+        gap: 18px;
+        padding-left: 18px;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-right: 285px;
+    }
+
+    .layout-konten .card.tengah {
+        padding: 22px;
+    }
+
+    .layout-konten .card.tengah > h1 {
+        font-size: 21px;
+    }
+
+    .konfirmasi-hapus {
+        padding: 18px;
+    }
+}
+
+/* ===== HP ===== */
+
+@media (max-width: 700px) {
+    .layout-utama {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        width: 100%;
+        min-height: auto;
+        padding: 12px;
+    }
+
+    .layout-konten {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .layout-konten .card.tengah {
+        width: 100%;
+        padding: 19px 14px;
+        border-radius: 13px;
+    }
+
+    .layout-konten .card.tengah > h1 {
+        font-size: 19px;
+    }
+
+    .konfirmasi-hapus {
+        padding: 16px 13px;
+        margin-bottom: 14px;
+    }
+
+    .konfirmasi-hapus p {
+        font-size: 12px;
+    }
+
+    .konfirmasi-hapus p strong {
+        flex-basis: 95px;
+    }
+
+    .konfirmasi-hapus .btn-hapus-menu {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    /* Sidebar kembali ke alur halaman di HP */
+    .sidebar-kanan {
+        position: relative;
+        top: auto;
+        right: auto;
+
+        width: 100%;
+        height: auto;
+        max-height: none;
+
+        overflow: visible;
+        margin-top: 0;
+    }
+}
+
+/* FIX SIDEBAR AGAR MENEMPEL DI KANAN LAYAR */
+body .sidebar-kanan {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    left: auto !important;
+
+    width: 250px !important;
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 9999;
+}
+
+/* Sisakan ruang untuk sidebar */
+body .layout-utama {
+    display: flex;
+    align-items: flex-start;
+    padding-right: 290px;
+}
+
+/* Konten utama */
+body .layout-konten {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+}
+
+/* Sidebar normal di HP */
+@media (max-width: 700px) {
+    body .sidebar-kanan {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 20px !important;
+    }
+
+    body .layout-utama {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    body .layout-konten {
+        width: 100%;
+    }
+}
+
+/* SIDEBAR MENEMPEL PERSIS DI TEPI KANAN */
+body .sidebar-kanan {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+
+    width: 250px !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+
+    margin: 0 !important;
+    border-radius: 0 !important;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 99999;
+}
+
+/* Ruang konten di sebelah kiri sidebar */
+body .layout-utama {
+    width: 100%;
+    max-width: none;
+    padding: 24px 274px 24px 24px !important;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Konten utama */
+body .layout-konten {
+    flex: 1;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+    body .sidebar-kanan {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+
+        border-radius: 12px !important;
+    }
+
+    body .layout-utama {
+        flex-direction: column;
+        padding: 12px !important;
+    }
+}
+/* Judul dan tombol hapus semua */
+.judul-hapus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.judul-hapus h1 {
+    margin: 0;
+}
+
+/* Tombol hapus semua */
+.btn-hapus-semua {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #dc2626;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+    white-space: nowrap;
+}
+
+.btn-hapus-semua:hover {
+    background: #991b1b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+}
+
+.btn-hapus-semua i {
+    font-size: 15px;
+}
+
+.judul-hapus form {
+    margin: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .judul-hapus {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-hapus-semua {
+        width: 100%;
+    }
+
+    .judul-hapus form {
+        width: 100%;
+    }
+}.judul-hapus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.judul-hapus h1 {
+    margin: 0;
+}
+
+.judul-hapus form {
+    margin: 0;
+}
+
+.btn-hapus-semua {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e34c61;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+    white-space: nowrap;
+}
+
+.btn-hapus-semua:hover {
+    background: #c92f46;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+}
+
+@media (max-width: 600px) {
+    .judul-hapus {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .judul-hapus form {
+        width: 100%;
+    }
+
+    .btn-hapus-semua {
+        width: 100%;
+    }
+}
