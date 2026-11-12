@@ -61,7 +61,7 @@ $total = $result ? mysqli_num_rows($result) : 0;
 
         <header class="topbar">
             <div>
-                <h1>Dashboard Pengaduan</h1>
+                <h1>Dashboard Pengaduan Fasilitas</h1>
                 <p>Kelola laporan fasilitas sekolah dengan mudah.</p>
             </div>
 
