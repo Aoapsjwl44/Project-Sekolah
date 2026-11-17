@@ -50,7 +50,7 @@ $total = $result ? mysqli_num_rows($result) : 0;
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="public/assets/css/index.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
 </head>
 <body>
 

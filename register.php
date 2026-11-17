@@ -66,8 +66,8 @@ function e($data): string {
 
     <title>Daftar Anggota | Pengaduan Sekolah</title>
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/login.css">
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>

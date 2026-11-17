@@ -88,7 +88,7 @@ function e($data): string {
 
     <title>Tambah Pengaduan | Panel Sekolah</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="public/assets/css/add.css">
