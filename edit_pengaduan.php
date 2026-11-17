@@ -95,6 +95,7 @@ if ($isAdmin) {
             </div>
 
             </div>
+        <?php include_once __DIR__."/layout/footer.php"; ?>
         </main>
 
         <?php include_once __DIR__."/layout/sidebar.php"; ?>
