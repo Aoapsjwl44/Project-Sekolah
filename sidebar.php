@@ -18,7 +18,7 @@ $isAdminSidebar = $roleSidebar === "admin";
 
     <!-- LOGO SEKOLAH -->
     <div class="brand">
-        <img src="2.png" alt="Logo sekolah">
+        <img src="public/assets/img/2.png" alt="Logo sekolah">
 
         <div>
             <strong>SMK Nurul Islam</strong>

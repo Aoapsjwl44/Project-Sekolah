@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="login-card">
 
             <div class="logo">
-                <img src="2.png" alt="Logo Sekolah">
+                <img src="public/assets/img/2.png" alt="Logo Sekolah">
             </div>
 
             <h1>Login</h1>

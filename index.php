@@ -310,7 +310,7 @@ $total = $result ? mysqli_num_rows($result) : 0;
     <aside class="sidebar">
 
         <div class="brand">
-            <img src="2.png" alt="Logo sekolah">
+            <img src="public/assets/img/2.png" alt="Logo sekolah">
 
             <div>
                 <strong>SMK Nurul Islam</strong>
