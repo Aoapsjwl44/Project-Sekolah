@@ -35,7 +35,7 @@ if ($isAdmin) {
     <title>Edit Pengaduan</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="edit2.css"> 
+    <link rel="stylesheet" href="public/assets/css/edit_pengaduan.css"> 
 </head>
 <body>
 <div class="container">
