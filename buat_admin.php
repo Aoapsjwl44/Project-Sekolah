@@ -1,6 +1,6 @@
 
 <?php
-require "koneksi.php";
+require_once __DIR__ . "/config/koneksi.php";
 
 $nama = "Pe";
 $username = "Aoapsjwl";

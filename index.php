@@ -2,7 +2,7 @@
 <?php
 require "auth.php";
 wajibLogin();
-require "koneksi.php";
+require_once __DIR__ . "/config/koneksi.php";
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -307,63 +307,7 @@ $total = $result ? mysqli_num_rows($result) : 0;
     </main>
 
     <!-- SIDEBAR DI KANAN -->
-    <aside class="sidebar">
-
-        <div class="brand">
-            <img src="public/assets/img/2.png" alt="Logo sekolah">
-
-            <div>
-                <strong>SMK Nurul Islam</strong>
-                <small>Fasilitas Sekolah</small>
-            </div>
-        </div>
-
-        <div class="profile">
-            <div class="avatar">
-                <i class="bi bi-person-fill"></i>
-            </div>
-
-            <div class="profile-info">
-                <strong><?= e($_SESSION["nama"] ?? "Pengguna") ?></strong>
-                <small>
-                    <?= $isAdmin ? "Administrator" : "Anggota" ?>
-                </small>
-            </div>
-        </div>
-
-        <p class="nav-label">MENU UTAMA</p>
-
-        <a href="index.php" class="nav-link active">
-            <i class="bi bi-grid-1x2-fill"></i>
-            Dashboard
-        </a>
-
-        <a href="add.php" class="nav-link nav-tambah">
-            <i class="bi bi-plus-circle"></i>
-            Tambah Pengaduan
-        </a>
-
-        <a href="edit_pengaduan.php" class="nav-link nav-edit">
-            <i class="bi bi-pencil-square"></i>
-            Edit Pengaduan
-        </a>
-
-        <a href="hapus_pengaduan.php" class="nav-link nav-hapus">
-            <i class="bi bi-trash3"></i>
-            Hapus Pengaduan
-        </a>
-
-        <div class="sidebar-bottom">
-            <a href="logout.php"
-               class="nav-link logout"
-               onclick="return confirm('Yakin ingin logout?')">
-
-                <i class="bi bi-box-arrow-left"></i>
-                Logout
-            </a>
-        </div>
-
-    </aside>
+    <?php include_once __DIR__ . "/layout/sidebar.php"; ?>
 
 </div>
 

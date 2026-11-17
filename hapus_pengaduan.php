@@ -1,7 +1,7 @@
 <?php
 require "auth.php";
 wajibLogin();
-require "koneksi.php";
+require_once __DIR__ . "/config/koneksi.php";
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -264,7 +264,7 @@ if ($isAdmin) {
 
         </main>
 
-        <?php require "sidebar.php"; ?>
+        <?php include_once __DIR__. "/layout/sidebar.php"; ?>
 
     </div>
 

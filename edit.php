@@ -2,7 +2,7 @@
 <?php
 require "auth.php";
 wajibLogin();
-require "koneksi.php";
+require_once __DIR__ . "/config/koneksi.php";
 
 function e($data) {
     return htmlspecialchars((string) $data, ENT_QUOTES, "UTF-8");
