@@ -307,7 +307,7 @@ $total = $result ? mysqli_num_rows($result) : 0;
     </main>
 
     <!-- SIDEBAR DI KANAN -->
-    <?php include_once __DIR__ . "/layout/sidebar.php"; ?>
+    <?php include_once __DIR__ . "/includes/layout/sidebar.php"; ?>
 
 </div>
 

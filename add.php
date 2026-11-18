@@ -2,7 +2,7 @@
 <?php
 require "auth.php";
 wajibLogin();
-require_once __DIR__. "/config/koneksi.php";
+require __DIR__. "/config/koneksi.php";
 
 $pesan = "";
 $nama_siswa = "";
@@ -286,7 +286,7 @@ function e($data): string {
 
     </main>
 
-    <?php include_once __DIR__ . "/layout/sidebar.php"; ?>
+    <?php include_once __DIR__ . "/includes/layout/sidebar.php"; ?>
 
 </div>
 

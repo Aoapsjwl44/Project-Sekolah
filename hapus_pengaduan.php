@@ -264,7 +264,7 @@ if ($isAdmin) {
 
         </main>
 
-        <?php include_once __DIR__. "/layout/sidebar.php"; ?>
+        <?php include_once __DIR__. "/includes/layout/sidebar.php"; ?>
 
     </div>
 
